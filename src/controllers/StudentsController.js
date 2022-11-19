@@ -2,7 +2,7 @@ const StudentsModel=require('../models/StudentsModel')
 
 //CRUD
 
-//C=CREATE
+// 2.REGISTRATION          ( C=CREATE/insert)
 exports.InsertStudent=(req,res)=>{
     let reqBody=req.body;
 
@@ -15,7 +15,7 @@ exports.InsertStudent=(req,res)=>{
            }
     })
 }
-//R =READ
+//1.LOGIN      (R =READ/select)
 exports.ReadStudent=(req,res)=>{
     let Query={}
     let Projection="Name Roll Class Remarks"
@@ -30,7 +30,8 @@ exports.ReadStudent=(req,res)=>{
     })
 }
 
-//U = UPDATE
+//3.CHANGE PASSWORD (U = UPDATE)
+
 exports.UpdateStudent=(req,res)=>{
 let id=req.params.id;
 let Query={_id:id}
